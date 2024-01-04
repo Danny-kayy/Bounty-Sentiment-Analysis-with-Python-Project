@@ -9,6 +9,7 @@ Sentiment analysis is a branch of natural language processing and data analysis 
 To run the code and install necessary libraries, use the following command:
 ```bash
 pip install pandas matplotlib seaborn nltk scikit-learn
+```
 
 ## Step 2: Introduction to VADER
 
@@ -26,6 +27,7 @@ import nltk
 
 from nltk.sentiment import SentimentIntensityAnalyzer
 sia = SentimentIntensityAnalyzer()
+```
 
 ## Step 3: Data Acquisition
 
@@ -57,6 +59,7 @@ for review_element in reviews_elements:
     review_text = review_element.text.strip()
     print(review_text)
     print('-' * 50)
+```
 ## Step 4: Sentiment Analysis
 
 Next, create a sentiment analysis classifying each viewer's review as either positive, negative, or neutral based on the compound sentiment score.
@@ -92,6 +95,7 @@ reviews = scrape_reviews(imdb_url)
 for i, review in enumerate(reviews, start=1):
     sentiment = analyze_sentiment(review)
     print(f'Review #{i}:\n{review}\nSentiment: {sentiment}\n{"-"*50}\n')
+```
 ## Step 5: Visualizing Results
 
 Present the outcomes in a simple bar chart format.
@@ -120,7 +124,7 @@ plt.xlabel('Sentiment')
 plt.ylabel('Number of Reviews')
 plt.title('Sentiment Analysis of IMDb Reviews')
 plt.show()
-
+```
 # Step 6: Summary
 
 The provided Python code conducts sentiment analysis on IMDb movie reviews using web scraping and Natural Language Toolkit (NLTK) with the VADER sentiment analysis tool. The goal is to extract reviews from the IMDb page of a specific movie and determine whether each review is positive, negative, or neutral.
